@@ -1,0 +1,23 @@
+{% load static %}
+<header class="header">
+    
+    <div class="header-content">
+        <div class="header-logo">
+            <img style="width: 150px; max-height: 149px;" src="{% static 'img/logo.png' %}" alt="">
+        </div>
+        <div class="header-box">
+            <ul class="header-nav">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a>
+                <li><a href="{% url 'book' %}">Book Now</a></li>
+                <li><a href="{% url 'about' %}">Our Story</a></li>
+                <li><a href="{% url 'career' %}">Career</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <ul class="header-options">
+                <li><a href="#" style="text-decoration: none;"><i class="fas fa-phone-volume">  +977986927491</i></a></li>
+            </ul>
+        </div>
+        <div class="btn-menu js-btn-menu"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+    </div>
+</header>

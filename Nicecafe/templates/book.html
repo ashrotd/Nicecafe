@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Reservation {% endblock title %}
+{% block body %}
+<body class="loaded">
+
+
+    <!-- BEGIN BODY -->
+    
+    <div class="main-wrapper">
+
+        <!-- BEGIN CONTENT -->
+
+        <main class="content">
+            <!-- BEGIN DETAIL MAIN BLOCK -->
+            <div class="detail-block detail-block_margin">
+                <div class="wrapper">
+                    <div class="detail-block__content">
+                        <h1>Booking</h1>
+                        <ul class="bread-crumbs">
+                            <li class="bread-crumbs__item">
+                                <a href="#" class="bread-crumbs__link">Home</a>
+                            </li>
+                            <li class="bread-crumbs__item">Check in</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DETAIL MAIN BLOCK EOF   -->
+            <!-- BEGIN REGISTRATION -->
+            <div class="login registration" style="padding-top : 0px">
+                
+                <div class="wrapper">
+                    {% include 'includes/alert.html' %}
+                    <section class = "head1">
+          
+                        <div class = "card-container shadow">
+                            <div class = "card-img">
+                
+                            </div>
+                
+                            <div class = "card-content">
+                                
+                                <h3 style="font-weight: bold; color: #bba772;">Reservation</h3>
+                                
+                                <form action="{% url 'book' %}" method="post">
+                                {% csrf_token %}
+                                        <div class="form-row form-group">
+                                            <div class='input-group date d-flex' id='datetimepicker1'>
+                                                <input type='text' class="form-control me-2" placeholder="Enter Your Arrival Date" name="dateTime" required/>
+                                                <span class="input-group-addon" style="z-index: 10; position: absolute; right: 16px; top: 16px; border: none; background-color: white;">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                
+                                        </div>
+                    
+                                    
+                                    <div class = "form-row">
+                                        <input type = "text" placeholder="Breakfast/Lunch/Dinner" name="name" required>
+                                        
+                                    </div>
+                
+                                    <div class = "form-row">
+                                        <input type = "number" placeholder="No. of People?" min = "1" name="number" required>
+                                        <input type = "submit" style="background-color: #bba772;" value = "BOOK Now">
+                                        
+                                    </div>
+                                                    
+                                </form>
+                                
+                            </div>
+                
+                        </div>
+                
+                    </section>
+                
+                    <script>
+                        $(function() {
+                            $('#datetimepicker1').datetimepicker();
+                        });
+                    </script>
+                    
+                </div>
+                
+            </div>
+            <!-- REGISTRATION EOF   -->
+            
+
+        </main>
+
+    
+{% endblock body %} 

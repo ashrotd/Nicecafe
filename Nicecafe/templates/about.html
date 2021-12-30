@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Our Story{% endblock title %}
+{% block body %}
+<body class="loaded">
+
+
+    <!-- BEGIN BODY -->
+
+    <div class="main-wrapper">
+
+        <!-- BEGIN CONTENT -->
+
+        <main class="content mb-5">
+            <!-- BEGIN DETAIL MAIN BLOCK -->
+            <div class="detail-block">
+                <div class="wrapper">
+                    <div class="detail-block__content">
+                        <h1 style="color: black; font-weight: bold;">About</h1>
+                        <ul class="bread-crumbs">
+                            <li class="bread-crumbs__item">
+                                <a href="{% url 'home' %}" class="bread-crumbs__link">Home</a>
+                            </li>
+                            <li class="bread-crumbs__item">About</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- DETAIL MAIN BLOCK EOF   -->
+            <section class="promo-video" style="margin-bottom : 0px; padding-top : 100px">
+                <div class="wrapper">
+                    <div class="trending-top">
+						<span class="saint-text">Promotion video</span>
+						<h2>Welcome to BeShope</h2>
+						<p>Today we can offer our customers exclusive products of 108 brands marked "only in BeShope"</p>
+                    </div>
+                    
+                </div>
+                 </section>
+            
+            <!-- BEGIN DISCOUNT -->
+			<div class="discount discount-about js-img" data-src="{% static 'img/about.jpg' %}">
+				<div class="wrapper">
+					<div class="discount-info">
+						<span class="saint-text" style="color: #bba772; font-weight: bold; background-color: white;">Success story</span>
+						<h2 style="color: black; font-weight: bold; background-color: white;">Nicecafe, Sydney's Taste</h2>
+                        <p style="color: white; font-weight: bold;">The Nicecafe network is being developed and improved, taking into account all consumer.</p>
+                        <p class="discount-info__sm" style="color: white; font-weight: 700;">Forming the range of stores, we, above all, strive not only to meet the format of "home shop", offering each customer the most basic household goods, but also to create a unique space of beauty and care. BeShope stores offer their customers the widest and highest quality selection of products from world-renowned manufacturers.</p>
+						
+					</div>
+				</div>
+			</div>
+            <!-- DISCOUNT EOF   -->
+            <!-- BEGIN TESTIMONIALS -->
+            <section class="testimonials">
+                <div class="wrapper">
+                    <div class="trending-top">
+						<span class="saint-text">They say</span>
+						<h2>testimonials</h2>
+                    </div>
+                    <div class="testimonials-slider js-testimonials-slider">
+                        <div class="testimonials-slide">
+                            <p>
+                                I am grateful to the employees of BeShop for the quality products that I have been using for more than a year, try to work at this level
+                                in the future. Thank you)
+                            </p>
+                            <div class="testimonials-author">
+                                <img data-src="https://via.placeholder.com/50" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img" alt="">
+                                <h5>Melissa Jones</h5>
+                            </div>
+                        </div>
+                        <div class="testimonials-slide">
+                            <p>
+                                I am grateful to the employees of BeShop for the quality products that I have been using for more than a year, try to work at this level
+                                in the future. Thank you)
+                            </p>
+                            <div class="testimonials-author">
+                                <img data-src="https://via.placeholder.com/50" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img" alt="">
+                                <h5>Melissa Gahan</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- TESTIMONIALS EOF   -->
+            
+        </main>
+        {% endblock body %}

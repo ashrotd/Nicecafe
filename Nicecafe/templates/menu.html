@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Menu{% endblock title %}
+{% block body %}
+<body class="loaded">
+
+
+    <!-- BEGIN BODY -->
+
+    <div class="main-wrapper">
+
+        <!-- BEGIN CONTENT -->
+
+        <main class="content">
+            <!-- BEGIN DETAIL MAIN BLOCK -->
+            <div class="detail-block detail-block_margin">
+                <div class="wrapper">
+                    <div class="detail-block__content">
+                        <h1>Our Menu</h1>
+                        <ul class="bread-crumbs">
+                            <li class="bread-crumbs__item">
+                                <a href="{% url 'home' %}" class="bread-crumbs__link">Home</a>
+                            </li>
+                            <li class="bread-crumbs__item">Menu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- DETAIL MAIN BLOCK EOF   -->
+            <!-- BEGIN PROFILE -->
+            <div class="profile" style="padding-top: 100px;">
+                <div class="wrapper">
+                    <img src="{% static 'img/menu.jpg' %}"  alt=""> 
+                </div>
+                <div class="wrapper my-2">
+                    <img src="{% static 'img/menu1.jpg' %}"  alt=""> 
+                </div>
+            </div>
+            <!-- PROFILE EOF   -->
+            <!-- BEGIN INSTA PHOTOS -->
+            <div class="insta-photos">
+                <a href="#" class="insta-photo">
+                    <img data-src="https://via.placeholder.com/320" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
+                        alt="">
+                    <div class="insta-photo__hover">
+                        <i class="icon-insta"></i>
+                    </div>
+                </a>
+                <a href="#" class="insta-photo">
+                    <img data-src="https://via.placeholder.com/320" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
+                        alt="">
+                    <div class="insta-photo__hover">
+                        <i class="icon-insta"></i>
+                    </div>
+                </a>
+                <a href="#" class="insta-photo">
+                    <img data-src="https://via.placeholder.com/320" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
+                        alt="">
+                    <div class="insta-photo__hover">
+                        <i class="icon-insta"></i>
+                    </div>
+                </a>
+                <a href="#" class="insta-photo">
+                    <img data-src="https://via.placeholder.com/320" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
+                        alt="">
+                    <div class="insta-photo__hover">
+                        <i class="icon-insta"></i>
+                    </div>
+                </a>
+                <a href="#" class="insta-photo">
+                    <img data-src="https://via.placeholder.com/320" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
+                        alt="">
+                    <div class="insta-photo__hover">
+                        <i class="icon-insta"></i>
+                    </div>
+                </a>
+                <a href="#" class="insta-photo">
+                    <img data-src="https://via.placeholder.com/320" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
+                        alt="">
+                    <div class="insta-photo__hover">
+                        <i class="icon-insta"></i>
+                    </div>
+                </a>
+            </div>
+            <!-- INSTA PHOTOS EOF   -->
+
+        </main>
+
+{% endblock body %}

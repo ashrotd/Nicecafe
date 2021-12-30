@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Career{% endblock title %}
+{% block body %}
+ 
+<body class="loaded">
+
+
+    <!-- BEGIN BODY -->
+
+    <div class="main-wrapper">
+
+        <!-- BEGIN CONTENT -->
+
+        <main class="content" style = "margin-bottom : 200px;">
+            <!-- BEGIN DETAIL MAIN BLOCK -->
+            <div class="detail-block detail-block_margin">
+                <div class="wrapper">
+                    <div class="detail-block__content">
+                        <h1>Career</h1>
+                        <ul class="bread-crumbs">
+                            <li class="bread-crumbs__item">
+                                <a href="#" class="bread-crumbs__link">Home</a>
+                            </li>
+                            <li class="bread-crumbs__item">Career</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- DETAIL MAIN BLOCK EOF   -->
+            <!-- BEGIN FAQ -->
+            <div class="faq">
+                <div class="wrapper">
+                    <div class="faq-search">
+                        <h2 class="text-center" style="font-weight : bold;">Hiring Positions</h2> 
+                    </div>
+                    
+                    {% for i in data %}
+                    <div class="faq-items my-2">
+                        <div class="faq-item">
+                            <div class="faq-item__head">
+                                <span class="faq-item__head-num">1</span>
+                                {{i.position}}
+                                <span class="faq-item__head-btn"></span>
+                            </div>
+                            <div class="faq-item__content">
+                                <p>{{i.description}}</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+            <!-- FAQ EOF   -->
+            
+        </main>
+
+
+{% endblock body %}
+

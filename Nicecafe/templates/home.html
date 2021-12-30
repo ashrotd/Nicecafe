@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<body class="loaded">
+
+	<!-- BEGIN BODY -->
+	<div class="main-wrapper">
+		<!-- BEGIN CONTENT -->
+		<main class="content">
+			<!-- BEGIN MAIN BLOCK -->
+			<div class="main-block load-bg">
+				<div class="wrapper">
+					<div class="main-block__content text-center" style="margin-top:100px;">
+						
+						<h1 class="main-text my-2" style="color: black;">Coffee Hub</h1>
+						<p style="color: black; font-weight: bold; margin: auto;">Taste of our coffee decides the blissful day, located in the heart of Sydney
+						</p>
+						<a href="#" class="btn">Full Menu</a>
+					</div>
+				</div>
+			</div>
+			<!-- MAIN BLOCK EOF -->
+			<!-- BEGIN TRENDING -->
+			<section class="trending">
+				<div class="trending-content">
+					<div class="trending-top">
+						<span class="saint-text">Nicecafe's</span>
+						<h2>Refreshing Cafe</h2>
+						<p>Extremely delicious tastes in the heart of Sydney. 
+						</p>
+					</div>
+					
+
+				</div>
+			</section>
+			<!-- TRENDING EOF   -->
+			<!-- BEGIN LOGOS -->
+			<div class="main-logos">
+				<img data-src="img/main-logo1.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
+					alt="">
+				<img data-src="img/main-logo2.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
+					alt="">
+				<img data-src="img/main-logo3.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
+					alt="">
+				<img data-src="img/main-logo4.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
+					alt="">
+				<img data-src="img/main-logo5.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
+					alt="">
+			</div>
+			<!-- LOGOS EOF   -->
+			<!-- BEGIN DISCOUNT -->
+			<div class="discount js-img" data-src="{% static 'img/body.jpg' %}">
+				<div class="wrapper">
+					<div class="discount-info">
+						
+						<span style="color:black;" class="main-text">Taste <span style="color:#bba772;">of</span> <span style="color:#bba772">Syd</span>Ney</span>
+						<p style="color:black; font-weight:bold;">Experience the best meal of Sydney with your family and friends. Book the table for preacquisition.
+						</p>
+						<a href="{% url 'book' %}" style="background: #bba772; color:white; padding: 15px 12px;" class="btn">get now!</a>
+					</div>
+				</div>
+			</div>
+			<!-- DISCOUNT EOF   -->
+			<!-- BEGIN ADVANTAGES -->
+			<div class="advantages">
+				<div class="wrapper">
+					<div class="advantages-items">
+						<div class="advantages-item">
+							<div class="advantages-item__icon">
+								<i class="icon-natural"></i>
+							</div>
+							<h4>natural</h4>
+							<p>Non aliqua reprehenderit reprehenderit culpa laboris nulla minim anim velit adipisicing
+								ea aliqua alluptate sit do do.</p>
+						</div>
+						<div class="advantages-item">
+							<div class="advantages-item__icon">
+								<i class="icon-quality"></i>
+							</div>
+							<h4>Quality</h4>
+							<p>Non aliqua reprehenderit reprehenderit culpa laboris nulla minim aelit adipisicing ea
+								aliqua alluptate sit do do.</p>
+						</div>
+						<div class="advantages-item">
+							<div class="advantages-item__icon">
+								<i class="icon-organic"></i>
+							</div>
+							<h4>organic</h4>
+							<p>Non aliqua reprehenderit reprehenderit a laboris nulla minim anim velit adipisicing ea
+								aliqua alluptate sit do do.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ADVANTAGES EOF   -->
+			<!-- BEGIN SUBSCRIBE -->
+			<div class="subscribe mb-5">
+				<div class="wrapper">
+					<div class="subscribe-form">
+						<div class="subscribe-form__img">
+							<img data-src="{% static 'img/subscribe.jpg' %}" height="302px;" src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+								class="js-img" alt="">
+						</div>
+						<form method='POST' action='{% url 'subscription' %}'>
+							{% csrf_token %}
+							<h3>Stay in touch</h3>
+							<p>Nourish your skin with toxin-free cosmetic roducts.</p>
+							<div class="box-field__row">
+								<div class="box-field">
+									<input type="email" class="form-control" placeholder="Enter your email" name="email">
+								</div>
+								<button type="submit" class="btn">subscribe</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<!-- SUBSCRIBE EOF   -->
+					</main>
+{% endblock body %}
