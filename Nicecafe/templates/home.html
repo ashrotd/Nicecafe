@@ -95,29 +95,6 @@
 				</div>
 			</div>
 			<!-- ADVANTAGES EOF   -->
-			<!-- BEGIN SUBSCRIBE -->
-			<div class="subscribe mb-5">
-				<div class="wrapper">
-					<div class="subscribe-form">
-						<div class="subscribe-form__img">
-							<img data-src="{% static 'img/5.jpg' %}" height="302px;" src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
-								class="js-img" alt="">
-						</div>
-						<form method='POST' action='{% url 'subscription' %}'>
-							{% csrf_token %}
-							<h3>Stay in touch</h3>
-							<p>Nourish your skin with toxin-free cosmetic roducts.</p>
-							<div class="box-field__row">
-								<div class="box-field">
-									<input type="email" class="form-control" placeholder="Enter your email" name="email">
-								</div>
-								<button type="submit" class="btn">subscribe</button>
-							</div>
-						</form>
-
-					</div>
-				</div>
-			</div>
 			<!-- SUBSCRIBE EOF   -->
 					</main>
 {% endblock body %}
