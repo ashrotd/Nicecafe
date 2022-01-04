@@ -2065,7 +2065,7 @@ header {
 }
 
 .header-options li i {
-	color: #bba772;
+	color: black;
 	-webkit-transition: all 0.3s linear;
 	-o-transition: all 0.3s linear;
 	font-size: 18px;
