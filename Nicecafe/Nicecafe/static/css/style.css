@@ -2975,7 +2975,7 @@ h6,
 .main-block {
 	padding-top: 340px;
 	padding-bottom: 237px;
-	background-image: url(../img/cafe_cover.jpg);
+	
 	background-position: center;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -4643,7 +4643,7 @@ h6,
 }
 
 .faq {
-	padding-top: 184px;
+	padding-top: 100px;
 }
 
 .faq .promo-video__decor {
@@ -5908,7 +5908,7 @@ blockquote:after,
 }
 
 .product {
-	padding-top: 180px;
+
 }
 
 .product .promo-video__decor {
