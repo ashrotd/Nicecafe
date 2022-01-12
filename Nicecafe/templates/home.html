@@ -22,15 +22,20 @@
 					<img src="{% static 'img/4.jpg' %}" class="d-block w-100" alt="...">
 				  </div>
 				</div>
+				<h2 class="main-text" style="position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				"><span style="color: Black;">Nice</span><span style="color:#bba772">cafe</span></h2>
 			  </div>
 			<!-- MAIN BLOCK EOF -->
 			<!-- BEGIN TRENDING -->
 			<section class="trending">
-				<div class="trending-content">
+				<div>
 					<div class="trending-top">
 						<span class="saint-text">Nicecafe's</span>
 						<h2>Refreshing Cafe</h2>
-						<p>Extremely delicious tastes in the heart of Sydney. 
+						<p>Extremely delicious tastes in the heart of Nelson Bay. 
 						</p>
 					</div>
 					
@@ -39,31 +44,38 @@
 			</section>
 			<!-- TRENDING EOF   -->
 			<!-- BEGIN LOGOS -->
-			<div class="main-logos">
-				<img data-src="img/main-logo1.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
-					alt="">
-				<img data-src="img/main-logo2.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
-					alt="">
-				<img data-src="img/main-logo3.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
-					alt="">
-				<img data-src="img/main-logo4.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
-					alt="">
-				<img data-src="img/main-logo5.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" class="js-img"
-					alt="">
-			</div>
 			<!-- LOGOS EOF   -->
 			<!-- BEGIN DISCOUNT -->
-			<div class="discount js-img" data-src="{% static 'img/body.jpg' %}">
-				<div class="wrapper">
-					<div class="discount-info">
-						
-						<span style="color:black;" class="main-text">Taste <span style="color:#bba772;">of</span> <span style="color:#bba772">Syd</span>Ney</span>
-						<p style="color:black; font-weight:bold;">Experience the best meal of Sydney with your family and friends. Book the table for preacquisition.
-						</p>
-						<a href="{% url 'book' %}" style="background: #bba772; color:white; padding: 15px 12px;" class="btn">get now!</a>
-					</div>
-				</div>
-			</div>
+			<div class="product">
+                <div class="wrapper">
+                    <div class="product-content">
+                        <div class="product-slider">
+                            <div class="product-slider__main">
+                                <div class="product-slider__main-item">
+                                    <div class="products-item__type">
+                                        
+                                    </div>
+                                    <img loading="lazy" src="{% static 'img/body.jpg' %}" alt="product">
+                                </div>
+                                
+                            </div>
+                            <div class="product-slider__nav">
+                                
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Nicecafe At Nelson Bay</h3>
+                            <p style="padding-top: 50px; color: #bba772;">Nice at Nelson Bay is a newly opened cafe in Nelson Bay.
+								Offering Breakfast, Lunch, Beverages and Light Snacks you are sure to find something to take your fancy.
+								We source our coffee from Jasper in Melbourne and use as much local produce as possible.
+								Our juices are freshly squeezed and majority of our desserts are hand made.
+								Poached eggs are our breakfast specialty and we have some of the best tasting salt and pepper squid in town.
+								Come and have a taste! </p>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
 			<!-- DISCOUNT EOF   -->
 			<!-- BEGIN ADVANTAGES -->
 			<div class="advantages">
@@ -73,54 +85,89 @@
 							<div class="advantages-item__icon">
 								<i class="icon-natural"></i>
 							</div>
-							<h4>natural</h4>
-							<p>Non aliqua reprehenderit reprehenderit culpa laboris nulla minim anim velit adipisicing
-								ea aliqua alluptate sit do do.</p>
+							<h4>Newly Opened</h4>
+							<p>Breakfast, Lunch and all good excuses in between!</p>
 						</div>
 						<div class="advantages-item">
 							<div class="advantages-item__icon">
 								<i class="icon-quality"></i>
 							</div>
-							<h4>Quality</h4>
-							<p>Non aliqua reprehenderit reprehenderit culpa laboris nulla minim aelit adipisicing ea
-								aliqua alluptate sit do do.</p>
+							<h4>Bookings</h4>
+							<p>Nice Cafe would like to wish all our customers a safe 2022 New Year. 
+								And yes, we are opened on New Year's Eve and New Year's Day.
+								Booking's are recommended.</p>
 						</div>
 						<div class="advantages-item">
 							<div class="advantages-item__icon">
 								<i class="icon-organic"></i>
 							</div>
-							<h4>organic</h4>
-							<p>Non aliqua reprehenderit reprehenderit a laboris nulla minim anim velit adipisicing ea
-								aliqua alluptate sit do do.</p>
+							<h4>Covid Safe</h4>
+							<p>QR codes are mandatory effective from Monday 27 December 2021, or until further notice from the government.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- ADVANTAGES EOF   -->
-			<!-- BEGIN SUBSCRIBE -->
-			<div class="subscribe mb-5">
-				<div class="wrapper">
-					<div class="subscribe-form">
-						<div class="subscribe-form__img">
-							<img data-src="{% static 'img/5.jpg' %}" height="302px;" src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
-								class="js-img" alt="">
-						</div>
-						<form method='POST' action='{% url 'subscription' %}'>
-							{% csrf_token %}
-							<h3>Stay in touch</h3>
-							<p>Nourish your skin with toxin-free cosmetic roducts.</p>
-							<div class="box-field__row">
+			
+			<div class="faq">
+                <div class="wrapper">
+                    <div class="faq-search">
+                        
+                            
 								<div class="box-field">
-									<input type="email" class="form-control" placeholder="Enter your email" name="email">
+									<h1 class="text-center">FAQs</h1>
 								</div>
-								<button type="submit" class="btn">subscribe</button>
-							</div>
-						</form>
-
-					</div>
-				</div>
-			</div>
-			<!-- SUBSCRIBE EOF   -->
+								
+					
+                        
+                    </div>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-item__head">
+                                <span class="faq-item__head-num">1</span>
+                                Where are you located?
+                                <span class="faq-item__head-btn"></span>
+                            </div>
+                            <div class="faq-item__content">
+                                <p>Nelson Towers - 71a Victoria Pde Nelson Bay, NSW, Australia 2315
+									</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-item__head">
+                                <span class="faq-item__head-num">2</span>
+                                Any information about Booking?
+                                <span class="faq-item__head-btn"></span>
+                            </div>
+                            <div class="faq-item__content">
+                                <p>During the busy holiday season, large groups (from 6 people onwards) are recommended to book in advance for breakfast, brunch and Lunch.
+									Thank you
+									From the Management.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-item__head">
+                                <span class="faq-item__head-num">3</span>
+                                What about QR codes?
+                                <span class="faq-item__head-btn"></span>
+                            </div>
+                            <div class="faq-item__content">
+                                <p>QR codes are mandatory effective from Monday 27 December 2021, or until further notice from the government.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item mb-5">
+                            <div class="faq-item__head">
+                                <span class="faq-item__head-num">4</span>
+                                Is dining service available?
+                                <span class="faq-item__head-btn"></span>
+                            </div>
+                            <div class="faq-item__content">
+                                <p>No Sorry! Breakfast, Lunch and all good excuses in between! </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                  
 					</main>
 					<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 {% endblock body %}
